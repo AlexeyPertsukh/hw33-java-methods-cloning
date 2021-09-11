@@ -1,9 +1,9 @@
 import java.io.Serializable;
 
 public class Address implements Cloneable, Serializable {
-    private String streetAddress;
-    private String city;
-    private int postalCode;
+    private final String streetAddress;
+    private final String city;
+    private final int postalCode;
 
     public Address(String streetAddress, String city, int postalCode) {
         this.streetAddress = streetAddress;

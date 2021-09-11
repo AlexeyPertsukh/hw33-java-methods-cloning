@@ -1,8 +1,6 @@
 import java.io.*;
 import java.util.Scanner;
 
-
-
 public class Util implements Serializable{
 
     private Util() {

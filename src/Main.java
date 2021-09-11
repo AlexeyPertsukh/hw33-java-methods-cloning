@@ -53,9 +53,6 @@ public class Main {
         inputCommand();
         executeCommand();
 
-//        user1.addPhoneNumber("1111");
-//        printUsers();
-
     }
 
     private void createUsers() {
@@ -94,7 +91,6 @@ public class Main {
         }
 
     }
-
 
     private void cloneSimple() {
         System.out.println("простое клонирование");
@@ -135,9 +131,7 @@ public class Main {
         System.out.println("Клонирование через сериализацию");
         try {
             user2 = cloneSerializable(user1);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         printUsers();
@@ -154,8 +148,6 @@ public class Main {
     }
 
 
-
-
     private void printUsers() {
         System.out.println("user1: " + user1);
         System.out.println("user2: " + user2);
@@ -170,8 +162,5 @@ public class Main {
         ObjectInputStream ois = new ObjectInputStream(bais);
         return (User)ois.readObject();
     }
-
-
-
 
 }
